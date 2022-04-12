@@ -8,13 +8,14 @@ public class HomeWork {
         ArrayList<Integer> list = new ArrayList<>();
         int a;
         Random random = new Random ();
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 20; i++){
             a = random.nextInt() % 100;
             list.add(a);
         }
         System.out.println(list);
 
-        System.out.println("Задача №1");
+
+ /*       System.out.println("Задача №1");
         Stream<Integer> str = list.stream();
         Predicate<Integer> fn;
         fn = (n) -> (n % 2) == 0;
@@ -44,10 +45,31 @@ public class HomeWork {
         list.stream()
                 .filter(value -> value > 20)
                 .sorted()
+
+                .forEach(value -> System.out.print((value * 10) + " "));
+        System.out.println();*/
+
+        System.out.println("Задача №5");
+        list.stream()
+                .skip(5)
+                .limit(10)
                 .forEach(value -> System.out.print(value + " "));
+        System.out.println();
 
 
 
 
+/*       System.out.println("Задача №6");
+        list.stream()
+                .skip(5)
+                .limit(10)
+                .forEach(value -> System.out.print(((value * 10) + " " )));
+        System.out.println();
+        list.stream()
+                .skip(5)
+                .limit(10)
+                .sorted(Comparator.reverseOrder())
+                .forEach(value -> System.out.print(((value + 5) + " " )));
+*/
     }
 }
